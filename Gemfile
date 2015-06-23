@@ -8,10 +8,14 @@ gem 'jbuilder',     '2.2.3'
 gem 'sdoc',         '0.4.0', group: :doc
 
 group :development, :test do
-  gem 'sqlite3',     '1.3.9'
-  gem 'byebug',      '3.4.0'
-  gem 'web-console'
-  gem 'spring',      '1.1.3'
+  gem 'pry-rails'
+  gem 'sqlite3'
+  gem 'byebug'
+  gem 'pry-byebug'
+  gem 'web-console',  			 '~> 2.0'
+  gem 'spring'
+  gem 'better_errors'
+  gem 'binding_of_caller'
 end
 
 group :test do
@@ -23,4 +27,5 @@ end
 group :production do
   gem 'pg',             '0.17.1'
   gem 'rails_12factor', '0.0.2'
+  gem 'puma'
 end
