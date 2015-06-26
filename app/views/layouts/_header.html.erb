@@ -1,11 +1,12 @@
-<header class="navbar navbar-fixed-top navbar-inverse">
+<header class="navbar navbar-fixed-top navbar-default">
   <div class="container">
-    <%= link_to "Eye Site", '#', id: "logo" %>
+    <%= link_to image_tag("eye_site_logo_final copy.png", alt: "eyesite logo"), root_path, id: "logo" %>
     <nav>
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "Home",   'Home' %></li>
-        <li><%= link_to "About",   'About' %></li>
-        <li><%= link_to "Location", 'Location' %></li>
+        <li><%= link_to "Home", root_path %></li>
+        <li><%= link_to "About", about_path %></li>
+        <li><%= link_to "Contact", contact_path %></li>
+        <li><%= link_to "Location", location_path %></li>
       </ul>
     </nav>
   </div>
