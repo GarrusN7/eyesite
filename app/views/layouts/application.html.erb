@@ -7,34 +7,34 @@
   <%= csrf_meta_tags %>
   <%= render 'layouts/shim' %>
   <style type="text/css">
-      html, body, #map-canvas { height: 100%; margin: 0; padding: 0;}
-    </style>
-    <script type="text/javascript"
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBzNUAf3kspvRfh-dASxL4ecLeCoHYxZEM">
-    </script>
-    <script type="text/javascript">
-      function initialize() {
-        var mapOptions = {
-          center: { lat: 41.039832, lng: -111.944461},
-          zoom: 17
-        };
-        var map = new google.maps.Map(document.getElementById('map-canvas'),
-            mapOptions);
+  html, body, #map-canvas { height: 100%; margin: 0; padding: 0;}
+  </style>
+  <script type="text/javascript"
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBzNUAf3kspvRfh-dASxL4ecLeCoHYxZEM">
+  </script>
+  <script type="text/javascript">
+  function initialize() {
+    var mapOptions = {
+      center: { lat: 41.039832, lng: -111.944461},
+      zoom: 17
+    };
+    var map = new google.maps.Map(document.getElementById('map-canvas'),
+    mapOptions);
 
-        var marker = new google.maps.Marker({
-          position: { lat: 41.039832, lng: -111.944461},
-          map: map,
-          title: 'Eye Site'
-      });
-      }
-      google.maps.event.addDomListener(window, 'load', initialize);
-    </script>
- </head>
- <body>
-   <%= render 'layouts/header' %>
-   <div class="container-fluid">
-     <%= yield %>
-     <%= render 'layouts/footer' %>
-   </div>
- </body>
+    var marker = new google.maps.Marker({
+      position: { lat: 41.039832, lng: -111.944461},
+      map: map,
+      title: 'Eye Site'
+    });
+  }
+  google.maps.event.addDomListener(window, 'load', initialize);
+  </script>
+</head>
+<body>
+  <%= render 'layouts/header' %>
+  <div class="container">
+    <%= yield %>
+    <%= render 'layouts/footer' %>
+  </div>
+</body>
 </html>
